@@ -11,7 +11,11 @@ project_root = os.path.abspath(os.path.join(api_dir, ".."))
 # This points specifically to your templates
 template_dir = os.path.join(project_root, 'templates')
 
-app = Flask(__name__, template_folder=template_dir)
+app = Flask(__name__,
+            template_folder=template_dir,
+            static_folder=os.path.join(project_root, "static"),
+            static_url_path="/static"
+            )
 
 
 def load_grant_data():
