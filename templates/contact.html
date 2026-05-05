@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Contact Us - SME Fund Finder{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card shadow-sm border-0 p-4">
+                <h2 class="fw-bold text-navy mb-3">Contact Us</h2>
+                <p class="text-muted">Have a question about a specific grant or our directory? Reach out to our team below.</p>
+                <hr>
+                <form action="#" method="POST">
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" placeholder="Email@example.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-control" rows="4" placeholder="How can we help you?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-navy w-100 rounded-pill py-2">Send Message</button>
+                </form>
+                <div class="mt-4 text-center">
+                    <small class="text-muted">Or email us directly at: <strong>JayR431722@gmail.com</strong></small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

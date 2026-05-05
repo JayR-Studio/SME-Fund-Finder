@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} - SME Fund Finder{% endblock %}
+
+{% block content %}
+<div class="container my-5 content-section">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item active">Resources</li>
+                </ol>
+            </nav>
+            <h1 class="fw-bold text-navy mb-3">{{ title }}</h1>
+            <p class="text-muted mb-4">Published May 2026 • 8 min read</p>
+            <hr class="mb-5">
+            
+            <div class="article-body">
+                {{ content | safe }}
+            </div>
+            
+            <div class="bg-light p-4 rounded mt-5 border-start border-gold border-4">
+                <h5 class="fw-bold">Ready to find funding?</h5>
+                <p class="mb-0">Search our directory of 1,000+ grants to find the right match for your business.</p>
+                <a href="/" class="btn btn-navy mt-3">Browse Directory</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
