@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, abort, request
+from flask import Flask, render_template, abort, request, send_from_directory
 import pandas as pd
 import json
 
@@ -82,6 +82,12 @@ def view_article(slug):
 def resources_directory():
     all_articles = load_articles() # Reuses your existing JSON loader
     return render_template('resources.html', articles=all_articles)
+
+
+@app.route('/sitemap.xml')
+def sitemap():
+    # Serves the sitemap from your static folder
+    return send_from_directory(app.static_folder, 'sitemap.xml')
 
 
 @app.route('/about')
